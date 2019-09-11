@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('{any?}', function () {
+    return view('app');
+});
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -25,4 +29,9 @@ Route::get('/home', 'AppController@index')->name('home');
 
 require base_path('routes/web-includes/tasks.php');
 
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
 

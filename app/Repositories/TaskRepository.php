@@ -57,7 +57,7 @@ class TaskRepository implements TaskRepositoryInterface{
     }
     public function delete($id)
     {
-        $this->task->whereId($id)->delete();
+       return $this->task->whereId($id)->delete();
     }
     public function publish($id)
     {

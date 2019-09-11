@@ -23,6 +23,7 @@ class UsersTableSeeder extends Seeder
         $admin->name = 'Admin';
         $admin->email = 'Admin@ad.com';
         $admin->password = bcrypt('secret');
+        $admin->api_token = Str::random(60);
         $admin->save();
         $admin->roles()->attach($adminRole->id);
 
@@ -31,6 +32,7 @@ class UsersTableSeeder extends Seeder
         $moderator->name = 'Pera';
         $moderator->email = 'Moderator@mo.com';
         $moderator->password = bcrypt('secret');
+        $moderator->api_token = Str::random(60);
         $moderator->save();
         $moderator->roles()->attach($moderatorRole->id);
         $moderator->roles()->attach($authorRole->id);
@@ -40,6 +42,7 @@ class UsersTableSeeder extends Seeder
         $author->name = 'Srdja';
         $author->email = 'Author@au.com';
         $author->password = bcrypt('secret');
+        $author->api_token = Str::random(60);
         $author->save();
         $author->roles()->attach($authorRole->id);
 
@@ -47,6 +50,7 @@ class UsersTableSeeder extends Seeder
         $author->name = 'Pedja';
         $author->email = 'Author1@au.com';
         $author->password = bcrypt('secret');
+        $author->api_token = Str::random(60);
         $author->save();
         $author->roles()->attach($authorRole->id);
 
@@ -54,6 +58,7 @@ class UsersTableSeeder extends Seeder
         $author->name = 'Nedja';
         $author->email = 'Author2@au.com';
         $author->password = bcrypt('secret');
+        $author->api_token = Str::random(60);
         $author->save();
         $author->roles()->attach($authorRole->id);
 
